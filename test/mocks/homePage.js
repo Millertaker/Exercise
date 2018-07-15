@@ -61,8 +61,8 @@ var homePage = `<header id="nav-wrapper" class="">
   </header>
 
   <main class="content-wrapper">
-    <div id="masking" class=""></div>
-    <div id="masking-mobile"></div>
+    <div id="translucent-mask" class=""></div>
+    <div id="translucent-mask-mobile"></div>
     <section class="banner-area">
       <div class="banner"></div>
       <div class="headline">

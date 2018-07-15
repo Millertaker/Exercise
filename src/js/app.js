@@ -4,7 +4,7 @@ import navMenu from './components/navMenu';
 (function(){
 	//init app
 	console.log('yo!');
-	hamburgerMenu('nav-wrapper', 'masking-mobile', 'content-wrapper');
-	navMenu('navigation-menu','masking');
+	hamburgerMenu('nav-wrapper', 'translucent-mask-mobile', 'content-wrapper');
+	navMenu('navigation-menu','translucent-mask');
 })();
 

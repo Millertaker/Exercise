@@ -33,7 +33,8 @@
   "scripts": {
     "test": "./node_modules/.bin/gulp test",
     "build-app": "./node_modules/.bin/gulp bundle",
-    "devsrv": "./node_modules/.bin/gulp"
+    "devsrv": "./node_modules/.bin/gulp",
+    "start": "./node_modules/.bin/gulp"
   },
   "author": "@Millertaker",
   "license": "ISC"

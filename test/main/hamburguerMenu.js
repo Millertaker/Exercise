@@ -20,7 +20,7 @@ describe('Nav Exercise test', () => {
   var clickEvent = simulant(window, 'click');
   const hamburgerMenuButton = document.getElementById('menu-toggle');
 
-	hamburgerMenu('nav-wrapper', 'masking-mobile', 'content-wrapper');
+	hamburgerMenu('nav-wrapper', 'translucent-mask-mobile', 'content-wrapper');
   it('Hamburger menu open', () => {
     var navWrapper = document.getElementById('nav-wrapper');
   	simulant.fire(hamburgerMenuButton, clickEvent);
