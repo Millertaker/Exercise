@@ -38,8 +38,72 @@ npm i && npm start
 
 The present website uses 2 simple ES6 components to handle the Menu behavior over the diff screen sizes 
 
+Folder srtructure 
 
-
+``` bash
+├── Readme.md
+├── devsrv
+│   ├── css
+│   │   └── allmin.css
+│   ├── fonts
+│   │   ├── GalaxieCopernicus-Book.eot
+│   │   ├── GalaxieCopernicus-Book.svg
+│   │   ├── GalaxieCopernicus-Book.woff
+│   │   ├── GalaxieCopernicus-BookItalic.eot
+│   │   ├── GalaxieCopernicus-BookItalic.svg
+│   │   ├── GalaxieCopernicus-BookItalic.woff
+│   │   ├── huge_agb_v5-webfont.eot
+│   │   ├── huge_agb_v5-webfont.svg
+│   │   ├── huge_agb_v5-webfont.ttf
+│   │   └── huge_agb_v5-webfont.woff
+│   ├── images
+│   │   ├── HUGE-black.png
+│   │   ├── HUGE-magenta.png
+│   │   ├── HUGE-white.png
+│   │   ├── HUGE.png
+│   │   ├── background-image.jpg
+│   │   ├── toggle-close.svg
+│   │   └── toggle-open.svg
+│   ├── index.html
+│   └── js
+│       └── app.min.js
+├── gulp
+│   ├── development.js
+│   ├── production.js
+│   ├── test.js
+│   ├── webpack.config.dev.js
+│   └── webpack.config.js
+├── gulpfile.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── js
+│   │   ├── app.js
+│   │   ├── components
+│   │   │   ├── hamburgerMenu.js
+│   │   │   └── navMenu.js
+│   │   ├── globals
+│   │   │   └── common.js
+│   │   └── helpers
+│   │       └── throttle.js
+│   └── less
+│       ├── cleanup.less
+│       ├── components
+│       │   └── nav.less
+│       ├── fonts.less
+│       ├── general.less
+│       ├── main.less
+│       ├── mixins
+│       │   └── mixins.less
+│       └── variables.less
+└── test
+    ├── common.js
+    ├── main
+    │   └── hamburguerMenu.js
+    ├── mocha.opts
+    └── mocks
+        └── homePage.js
+```
 
 
 # Huge Navigation Exercise
