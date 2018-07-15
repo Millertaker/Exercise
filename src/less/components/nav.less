@@ -1,0 +1,289 @@
+#nav-wrapper {
+	width: 100%;
+	float: left;
+	z-index: 20;
+	background-color: @huge-magenta;
+	color: @white;
+	padding: 0;
+	
+	position: relative;
+}
+
+.mobile-menu {
+	display: none;
+}
+
+.huge-logo {
+	float: left;
+	margin: 0 48px 0 0;
+	padding: 24px 0 24px 24px;
+
+	img {
+		width: 60px;
+		float: left;
+	}
+}
+
+.navigation-menu {
+	float: left;
+}
+
+.sub-nav-element {
+	display: none;
+	width: auto;
+	padding: 12px 0;
+	position: absolute;
+	left: 0;
+	top: 72px;
+	background-color: @white;
+	z-index: 20;
+
+	&.display {
+		display: block;
+	}
+
+	li {
+		float: left;
+		width: 100%;
+	}
+
+	.second-level {
+		white-space: nowrap;
+		padding: 16px 24px;
+		width: 100%;
+		font-family: 'GalaxieBook';
+		font-size: @font-second-level-desktop-lg;
+		color: @black;
+		box-sizing: border-box;
+		
+
+		&:hover {
+			background-color: @light-gray;
+			color: @huge-magenta;
+		}
+	}
+}
+
+.mobile-copyright {
+	display: none;
+}
+
+.nav-element {
+	float: left;
+	position: relative;
+
+	&.open {
+		background-color: @white;
+
+		.first-level {
+			color: @huge-magenta;
+		}
+	}
+
+	a {
+		float: left;
+		padding: 24px;
+		.lv1-desktop-lg
+	}
+
+	&:hover {
+		background-color: @white;
+		cursor: pointer;
+
+		.first-level {
+			color: @huge-magenta;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 990px) {	
+	.nav-element {
+		a {
+			padding: 24px 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 899px) {
+	.nav-element {
+		a {
+			padding: 16px;
+			.lv1-desktop-md
+		}
+	}
+
+	.sub-nav-element {
+		top: 50px;
+
+		.second-level {
+			.lv2-desktop-md
+		}
+	}
+
+	
+	.huge-logo {
+		padding: 16px 0 16px 16px;
+		margin: 0 48px 0 0;
+		float: left;
+
+		img {
+			width: 46px;
+			float: left;
+		}
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	#nav-wrapper {
+		height: 60px;
+
+		.huge-logo {
+			padding: 20px 0 20px 24px;
+			transition: 0.5s;
+			position: absolute;
+			left: -80px;
+
+			img {
+				width: 50px;
+			}
+		}
+	}
+
+	.menu-area {
+		float: left;
+		width: 100%;
+		height: 60px;
+		z-index: 30;
+		
+		position: relative;
+		background-color: @huge-magenta;
+	}
+
+	.mobile-menu {
+		left: 0px;
+		display: block;
+		width: 72px;
+		height: 60px;
+		transition: 1s;
+		background-image: url('../images/toggle-open.svg');
+		background-position: center; 
+		background-size: cover;
+		position: absolute;
+		-webkit-appearance: none;
+		background-color: @huge-magenta;
+		border: none;
+
+		&.close {
+			background-image: url('../images/toggle-close.svg');
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.navigation-menu {
+		background-color: @white;
+		z-index: 20;
+		height: 100vh;
+		transition: 0.5s;
+		position: absolute;
+		top: 60px;
+		left: -280px;
+		
+		.transform(translate(0, -60px));
+		
+		.mobile-copyright {
+			display: block;
+		}
+
+		.mobile-copyright {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 18px 24px;
+			.copyright-mobile
+		}
+	}
+
+	.mobile-container {
+		padding: 72px 0;
+		float: left;
+		width: 280px;
+	}
+
+	.nav-element {
+		float: left;
+		width: 100%;
+
+		&.sub-menu {
+			&.open:after {
+				.transform(rotate(-135deg));
+				top: 20px;
+			}
+
+			&:after {
+				top: 14px;
+				right: 15px;
+				width: 10px;
+				height: 10px;
+				content: '';
+				display: block;
+				position: absolute;
+				
+				border-bottom: 3px solid @huge-magenta;
+				border-right: 3px solid @huge-magenta;
+				.transform(rotate(45deg));
+				transition: 0.5s;
+			}
+		}
+
+		&:hover {
+			color: @black;
+		}
+
+		a {
+			padding: 15px 24px;
+		}
+
+		.first-level {
+			color: @black;
+			width: 100%;
+			position: relative;
+	    box-sizing: border-box;
+
+			&:hover {
+				background-color: @light-gray;
+				color: @huge-magenta !important;
+			}
+		}
+
+		.sub-nav-element {
+			position: relative;
+			display: none;
+			top: 0;
+			padding: 0;
+
+			&.display {
+				display: block;
+			}
+		}
+	}
+
+	//menu opened
+	.open-mobile {
+		.navigation-menu {
+			left: 0;
+		}
+
+		.huge-logo{
+			left: 0 !important;
+		}
+
+		.mobile-menu {
+			left: 100%;
+			.transform(translate(-72px, 0px));
+		}
+	}
+}

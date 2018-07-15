@@ -1,0 +1,15 @@
+#folders to be ignored in git
+node_modules
+credentials.js
+*~
+.DS_STORE
+devsrv/css/allmin.css
+devserv/css/allmin.css
+devserv/js/app.min.js
+devsrv/js/
+devsrv/css/
+build
+coverage
+reports
+logs
+.nyc_output
