@@ -1,8 +1,17 @@
-const navMenu = function(selector, mask){
+const navMenu = function(selector, mask, data){
 	var menu = document.querySelector(`.${selector}`);
 	var linksLv1 = menu.querySelectorAll('.first-level');	
 	var mask = document.getElementById(mask);
 	var lastClicked;
+	var templateMenuLv1 = `<li class="nav-element sub-menu">
+            <a class="first-level" href="_url_">_label_</a>
+            	_lv2_
+         		</li>`;
+	var templateMenuLv2 = `<ul class="sub-nav-element">
+               						_items_
+            						</ul>`;
+	var templateMenuItemLv2 = `<li><a class="second-level" href="_url_">_label_</li>`;
+
 
 	var setupEvents = function() {
 		linksLv1.forEach(item => { item.addEventListener('click', onClickLv1 )} );
@@ -46,7 +55,33 @@ const navMenu = function(selector, mask){
 		subMenus.forEach(subMenu => {subMenu.classList.remove('display')});
 	}
 
+	var setupMenu = function() {
+		var menuDom = menu.querySelector('.mobile-container');
+		var items = data.items; 
+		var menuContent = ``;
+		for(var i in items) {
+			var buffer = '';
+			buffer = templateMenuLv1.replace('_label_', items[i].label);
+			buffer = buffer.replace('_url_', items[i].url);
+			
+			if(items[i].items.length > 0){
+				buffer = buffer.replace('_lv2_', '');
+			} else {
+				buffer = buffer.replace('_lv2_', '');
+			}
+
+			menuContent += buffer;
+
+		}
+
+		menuDom.innerHTML = menuContent;
+
+		console.log(menuContent);
+
+	}
+
 	var init = function(){
+		setupMenu();
 		setupEvents();
 	}
 

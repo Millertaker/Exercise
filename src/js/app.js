@@ -5,6 +5,16 @@ import navMenu from './components/navMenu';
 	//init app
 	console.log('yo!');
 	hamburgerMenu('nav-wrapper', 'masking-mobile', 'content-wrapper');
-	navMenu('navigation-menu','masking');
+
+	fetch('data/nav.json')
+		.then(function(response) { return response.json(); })
+	  .then(function(data) {
+	  	navMenu('navigation-menu','masking', data);
+	  })
+	  .catch(function(error) {
+		  console.log('It was an error fetching the data:' + error.message);
+		});
+
+	
 })();
 
